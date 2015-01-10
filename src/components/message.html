@@ -1,0 +1,14 @@
+<div
+  class="table bold mb2 rounded"
+  ng-class="{
+    'bg-light-gray': message.type == 'default',
+    'white bg-green': message.type == 'success',
+    'white bg-blue': message.type == 'info',
+    'bg-yellow': message.type == 'warning',
+    'white bg-red': message.type == 'error'
+  }">
+  <div ng-transclude class="p2 table-cell full-width"></div>
+  <a class="h3 table-cell button py2 button-nav-dark"
+    ng-if="message.dismiss"
+    ng-click="message.dismiss">&times;</a>
+</div>

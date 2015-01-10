@@ -1,0 +1,8 @@
+<div>
+  <div ng-if="!items" class="bg-white border rounded" ng-transclude></div>
+  <div ng-if="items" class="bg-white border rounded">
+    <bass-nav-item ng-repeat="item in items" ng-transclude class="">
+      {{ item.name }}
+    </bass-nav-item>
+  </div>
+</div>
